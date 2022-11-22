@@ -4,26 +4,11 @@
  * 3: Innføre klasse
  */
 
-var range = 250;
-var counts = new int[range];
-while (true)
-{
-    var text = Console.ReadLine();
-    foreach (var character in text)
-    {
-        var characterAsciiNumber = (int)character;
-        counts[characterAsciiNumber]++;
-    }
-    for (var characterAsciiNumber = 0; characterAsciiNumber < range; characterAsciiNumber++)
-    {
-        var howManyOfThisCharacter = counts[characterAsciiNumber];
-        if (howManyOfThisCharacter > 0)
-        {
-            var character = (char)characterAsciiNumber;
-            Console.WriteLine(character + " - " + howManyOfThisCharacter);
-        }
-    }
-}
+using CountCharsRefactoring;
+
+AppMultiFlag.Run();
+//FlagApp.Run();
+//App.Run();
 
 // DRY = Don't Repeat Yourself
 /*
